@@ -1,0 +1,8 @@
+import { FETCH_RESULT } from '../actions/types';
+export default function(state = [] ,action){
+  switch(action.type){
+    case FETCH_RESULT :
+      return action.payload.data.items;
+  }
+  return state;
+}
